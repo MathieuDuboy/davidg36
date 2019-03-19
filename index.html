@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Test des fonctions LocalStorage</title>
+	<meta content="" name="description">
+	<meta content="Mathieu DUBOY" name="author">
+	<link href="css/style.css" rel="stylesheet">
+  <script src="js/script.js"></script>
+
+</head>
+<body>
+	<p>Array actuel listeEnvie : <span id="tab_listeEnvie">...</span></p>
+	<p>Nombre d'item total dans listeEnvie : <span id="nb_listeEnvie">...</span></p>
+	<p id="numItem"></p><a href="#" onclick="Delete(22)">Delete</a> <a href="#" onclick="Delete(21)">Delete</a> <a href="#" onclick="Delete(17)">Delete</a> <a href="#" onclick="Delete(9)">Delete</a> <a href="#" onclick="Delete(5)">Delete</a> <a href="#" onclick="Delete(15)">Delete</a>
+	<script>
+	   // Simulation du stoclage dans localStorage de votre tableau
+	   var listeEnvie = [22,21,17,9,5,15];
+	   var tab_string_listeEnvie = JSON.stringify(listeEnvie);
+	   document.getElementById("tab_listeEnvie").innerHTML = tab_string_listeEnvie;
+	   localStorage.setItem("listeEnvie",  JSON.stringify(listeEnvie));
+	   Display();
+	</script>
+</body>
+</html>
